@@ -1,0 +1,11 @@
+node_modules
+.next
+.env
+.env.local
+bin/
+models/
+*.gguf
+.local-ai.log
+*.tsbuildinfo
+next-env.d.ts
+out
