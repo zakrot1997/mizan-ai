@@ -1,0 +1,17 @@
+{
+  "name": "ميزان AI — مكتب الأعمال الذكي",
+  "short_name": "ميزان",
+  "description": "إدارة أعمال ومشاريع بالذكاء الاصطناعي مع وكيل يتحكم بمتصفح مدمج — يعمل محلياً على نماذج GGUF أو سحابياً",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#05070d",
+  "theme_color": "#0a0e17",
+  "icons": [
+    { "src": "/logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

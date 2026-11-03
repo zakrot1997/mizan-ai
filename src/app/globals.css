@@ -1,1 +1,167 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plex), "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  font-family: var(--font-plex), "Segoe UI", system-ui, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 85% -10%, rgba(139, 92, 246, 0.16), transparent 60%),
+    radial-gradient(1000px 600px at -10% 110%, rgba(34, 211, 238, 0.14), transparent 55%),
+    radial-gradient(700px 500px at 50% 50%, rgba(52, 211, 153, 0.05), transparent 60%),
+    #05070d;
+  overflow: hidden;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #fff;
+}
+
+/* إطار النافذة المستقلة */
+.app-frame {
+  height: 100dvh;
+  padding: 10px;
+}
+@media (max-width: 640px) {
+  .app-frame {
+    padding: 0;
+  }
+  .app-frame > div {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+/* زجاج */
+.glass {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+.glass-strong {
+  background: linear-gradient(160deg, rgba(20, 28, 45, 0.92), rgba(11, 15, 25, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(22px);
+}
+
+.logo-mark {
+  filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.5));
+}
+
+/* أزرار */
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 800;
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-base:active {
+  transform: scale(0.96);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #0891b2, #7c3aed);
+  color: #fff;
+  box-shadow: 0 6px 24px -8px rgba(124, 58, 237, 0.55);
+}
+.btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 8px 30px -8px rgba(34, 211, 238, 0.6);
+}
+.btn-soft {
+  background: rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.btn-soft:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.btn-ghost {
+  color: #94a3b8;
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+.btn-danger {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fda4af;
+  border-color: rgba(244, 63, 94, 0.3);
+}
+.btn-danger:hover {
+  background: rgba(244, 63, 94, 0.25);
+}
+
+/* حقول الإدخال */
+.inp {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 9px 12px;
+  font-size: 13px;
+  color: #f1f5f9;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.inp::placeholder {
+  color: #475569;
+}
+.inp:focus {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+select.inp option {
+  background: #0d1422;
+  color: #e2e8f0;
+}
+
+/* تمرير */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* كيبورد */
+kbd {
+  font-family: inherit;
+}
+
+code {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+/* نبض ناعم للنقاط الحية */
+@keyframes softpulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
