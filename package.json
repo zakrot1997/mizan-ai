@@ -9,12 +9,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@wllama/wllama": "^3.8.1",
     "dotenv": "17.3.1",
     "drizzle-orm": "0.45.2",
+    "framer-motion": "^14.9.0",
+    "lucide-react": "^1.66.0",
     "next": "16.2.6",
     "pg": "8.20.0",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react-dom": "19.2.6",
+    "recharts": "^3.10.1",
+    "swr": "^2.5.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.17",
